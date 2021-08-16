@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>倒计时页面</title>
+		<style>
+				
+			body{
+				background-image: url(img/P6.jpg);
+				background-size: cover;
+			}
+			#t{
+				position: absolute;
+                left: 100px;
+				top: 20px;
+				font-size: 550px;
+				text-align: left;
+			    color: azure;
+				text-shadow: lightgoldenrodyellow 0 0 100px;
+				float: left;
+			}
+			.img{
+				float: left;
+				margin-top: 100px;
+				margin-left: 800px;
+				font-size: 23px;
+			}
+		</style>
+	</head>
+	<body onload="tt()">
+		<div>
+			<audio loop autoplay >
+				<source src="music/园游会_周杰伦_128K.mp3"></source>
+			</audio>
+		</div>
+		
+		<div id="t">8</div>
+		
+		<div class="img" id="img07" style="display: block;">
+			想带你去巴黎，与你漫步于巴黎铁塔之下，坐在塞纳河畔的咖啡厅，静静地感受这份美好，你专心在画睫毛，我专心在逗你笑<br>
+			<img src="img/timg-5(1).jpeg" style="margin:20px;width:500px;height: 450px;">
+		</div>
+		
+		<div class="img" id="img06" style="display: none;">
+			想带你去东京看樱花，把最美的风景与你分享，感受漫天樱花飞舞，而我牵着你的手<br><br>
+			<img src="img/timg-8.jpeg" style="margin:20px;width:500px;height: 450px;">
+		</div>
+		
+		<div class="img" id="img05" style="display: none;">
+			想和你去挪威海群岛，看最美极光，因为我想不到还有什么东西比你更美<br><br>
+			<img src="img/timg-10.jpeg" style="margin:20px;width:500px;height: 450px;">
+		</div>
+		 
+		 <div class="img" id="img04" style="display: none;">
+		 	黄金海岸的细沙，是会跟着你一辈子的；而我眼中的你，也是会跟着我一辈子的<br><br>
+		 	<img src="img/timg-12.jpeg" style="margin:20px;width:500px;height: 450px;">
+		 </div> 
+		 
+		 <div class="img" id="img03" style="display: none;">
+		 	哥本哈根里有童话王国的爱情，而我想要与你共同演绎一生<br><br>
+		 	<img src="img/timg-17.jpeg" style="margin:20px;width:500px;height: 450px;">
+		 </div> 
+		 
+		 <div class="img" id="img02" style="display: none;">
+		 	夜空霓虹，都是我不要的繁荣，或许去趟沙滩，或许去看看夕阳，或许去任何一个有你的地方，情绪在咖啡馆，被调成一篇文章，彻底爱上你如诗一般美丽的脸颊<br><br>
+		 	<img src="img/timg-14.jpeg" style="margin:20px;width:500px;height: 450px;">
+		 </div> 
+		 
+		 <div class="img" id="img01" style="display: none;">
+		 	我最想带你去周杰伦的演唱会，因为我想让你看看我的青春，看看漫天的告白气球<br><br>
+		 	<img src="img/timg-24.jpeg" style="margin:20px;width:500px;height: 450px;">
+		 </div>
+		 
+		<div class="img" id="img00" style="display: none;">
+			这是我想要给你的最美婚礼的样子<br><br>
+			<img src="img/timg-1.jpeg" style="margin:20px;width:500px;height: 450px;">
+		</div>
+					   
+	
+	</body>
+	<script>
+		var abc;
+		var num;
+		var tem;
+		function tt(){
+			var t=document.getElementById("t");
+			var num =t.innerHTML;
+			num--;
+			t.innerHTML=num;
+			var bb=document.getElementById("img0"+num);
+			for(var i=0;i<=7;i++){
+				document.getElementById("img0"+i).style.display="none";
+			}
+			bb.style.display="block";
+			abc=setTimeout("tt()",2000);
+			if(num<=0){
+				clearTimeout(abc);
+				setTimeout("start()",4000);
+			}
+			
+		}
+		function start(){
+			window.location="love.html";
+		}
+	</script>
+</html>
